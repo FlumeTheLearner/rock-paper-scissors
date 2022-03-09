@@ -1,7 +1,7 @@
 function computerPlay() {
   let handSignals = ["rock", "paper", "scissors"];
-  let computerChoice =
-    handSignals[Math.floor(Math.random() * handSignals.length)];
+  let randChoice = handSignals[Math.floor(Math.random() * handSignals.length)];
+  console.log(computerChoice);
 }
 
 let playerSelection;

@@ -1,4 +1,4 @@
-function computerPlay() {
-  let playerSelection;
-  let computerSelection;
-}
+function computerPlay() {}
+
+let playerSelection;
+let computerSelection;

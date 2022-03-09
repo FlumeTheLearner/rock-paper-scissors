@@ -4,5 +4,7 @@ function computerPlay() {
   console.log(computerChoice);
 }
 
+// function returns the expected value - tested in browser
+
 let playerSelection;
 let computerSelection;

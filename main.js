@@ -1,13 +1,15 @@
+let playerSelection = "rock";
+let computerSelection = computerPlay();
+
 function computerPlay() {
-  let handSignals = ["rock", "paper", "scissors"];
-  let randChoice = handSignals[Math.floor(Math.random() * handSignals.length)];
-  return randChoice;
+  let choices = ["rock", "paper", "scissors"];
+  let result = choices[Math.floor(Math.random() * choices.length)];
+  return result;
 }
 
 // function returns the expected value - tested in browser
 
 function playRound(playerSelection, computerSelection) {
-  let result;
   // draw result
   if (playerSelection == "rock" && computerSelection == "rock") {
     result = "Draw";
@@ -29,20 +31,12 @@ function playRound(playerSelection, computerSelection) {
     result = "You lose! Rock beats Scissors";
   } else if (computerSelection == "paper" && playerSelection == "rock") {
     result = "You lose! Rock beats Scissors";
+  } else {
+    result = "Error has occured";
   }
-  return result;
+  console.log(result);
 }
 
-let playerSelection = document.querySelector("#pchoice").value;
-let computerSelection = computerPlay();
-let result = playRound(playerSelection, computerSelection);
-document.querySelector("#presult").innerHTML = result;
-
-// function game() {
-//   for (let i = 0; i < 5; i++) {
-//     let playerSelection = playerPlay();
-//     let computerSelection = computerPlay();
-//     let currentRound = playRound(playerSelection, computerSelection);
-//     console.log(currentRound);
-//   }
-// }
+console.log(playerSelection);
+console.log(computerPlay());
+console.log(playRound(playerSelection, computerSelection));

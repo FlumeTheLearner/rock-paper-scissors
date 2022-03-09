@@ -31,6 +31,6 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-let playerSelection = "rock";
+let playerSelection = "SCISSORS";
 let computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection.toLowerCase(), computerSelection));

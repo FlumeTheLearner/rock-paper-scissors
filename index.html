@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock paper scissors</title>
   </head>
-  <body></body>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Rock, Paper, Scissors!</legend>
+        <div>
+          <label for="pchoice">Choose your move: </label>
+          <select name="pchoice" id="pchoice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>
+          </select>
+        </div>
+        <div>
+          <button type="button" onclick (playRound())>Play!</button>
+        </div>
+        <div>
+          <span id="presult"></span>
+        </div>
+      </fieldset>
+    </form>
+  </body>
   <script src="main.js"></script>
 </html>

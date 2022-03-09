@@ -7,32 +7,42 @@ function computerPlay() {
 // function returns the expected value - tested in browser
 
 function playRound(playerSelection, computerSelection) {
+  let result;
   // draw result
   if (playerSelection == "rock" && computerSelection == "rock") {
-    console.log("DRAW!");
+    result = "Draw";
   } else if (playerSelection == "paper" && computerSelection == "paper") {
-    console.log("DRAW!");
+    result = "Draw";
   } else if (playerSelection == "scissors" && computerSelection == "scissors") {
-    console.log("DRAW!");
+    result = "Draw";
     // win result
   } else if (playerSelection == "rock" && computerSelection == "scissors") {
-    console.log("You win! Rock beats Scissors");
+    result = "You win! Rock beats Scissors";
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
-    console.log("You win! Scissors beats Rock");
+    result = "You win! Rock beats Scissors";
   } else if (playerSelection == "paper" && computerSelection == "rock") {
-    console.log("You win! Paper beats Rock");
+    result = "You win! Rock beats Scissors";
     // lose result
   } else if (computerSelection == "rock" && playerSelection == "scissors") {
-    console.log("You lose! Rock beats Scissors");
+    result = "You lose! Rock beats Scissors";
   } else if (computerSelection == "scissors" && playerSelection == "paper") {
-    console.log("You lose! Scissors beats Rock");
+    result = "You lose! Rock beats Scissors";
   } else if (computerSelection == "paper" && playerSelection == "rock") {
-    console.log("You lose! Paper beats Rock");
+    result = "You lose! Rock beats Scissors";
   }
+  return result;
 }
 
-let playerSelection = "SCISSORS";
+let playerSelection = document.querySelector("#pchoice").value;
 let computerSelection = computerPlay();
-console.log(playRound(playerSelection.toLowerCase(), computerSelection));
+let result = playRound(playerSelection, computerSelection);
+document.querySelector("#presult").innerHTML = result;
 
-function game() {}
+// function game() {
+//   for (let i = 0; i < 5; i++) {
+//     let playerSelection = playerPlay();
+//     let computerSelection = computerPlay();
+//     let currentRound = playRound(playerSelection, computerSelection);
+//     console.log(currentRound);
+//   }
+// }

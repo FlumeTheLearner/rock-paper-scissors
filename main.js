@@ -9,4 +9,12 @@ function computerPlay() {
 let playerSelection;
 let computerSelection = computerPlay();
 
-function playRound() {}
+function playRound(playerSelection, computerSelection) {
+  switch (true) {
+    case playerSelection == "rock" && computerSelection == "rock":
+    case playerSelection == "paper" && computerSelection == "paper":
+    case playerSelection == "scissors" && computerSelection == "scissors":
+      console.log("DRAW!");
+      break;
+  }
+}

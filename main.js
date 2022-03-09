@@ -36,3 +36,4 @@ function playRound(playerSelection, computerSelection) {
       break;
   }
 }
+console.log(playRound(playerSelection, computerSelection));

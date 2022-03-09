@@ -16,5 +16,14 @@ function playRound(playerSelection, computerSelection) {
     case playerSelection == "scissors" && computerSelection == "scissors":
       console.log("DRAW!");
       break;
+    case playerSelection == "rock" && computerSelection == "scissors":
+      console.log("You win! Rock beats Scissors");
+      break;
+    case playerSelection == "scissors" && computerSelection == "paper":
+      console.log("You win! Scissors beats Paper");
+      break;
+    case playerSelection == "paper" && computerSelection == "rock":
+      console.log("You win! Paper beats Rock");
+      break;
   }
 }

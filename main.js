@@ -34,3 +34,5 @@ function playRound(playerSelection, computerSelection) {
 let playerSelection = "SCISSORS";
 let computerSelection = computerPlay();
 console.log(playRound(playerSelection.toLowerCase(), computerSelection));
+
+function game() {}

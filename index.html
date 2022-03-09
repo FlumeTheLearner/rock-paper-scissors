@@ -9,11 +9,13 @@
   <body>
     <form>
       <fieldset>
-        <legend>Rock, Paper, Scissors!</legend>
+        <!-- <legend></legend> -->
         <div>
-          <button id="pchoice">Rock</button>
-          <button id="pchoice">Paper</button>
-          <button id="pchoice">Scissors</button>
+          <label for="pchoice">Choose rock, paper of scissors!</label>
+          <input type="text" id="pchoice" name="pchoice" />
+        </div>
+        <div>
+          <button type="button" onclick="(playRound())">Play!</button>
         </div>
         <div>
           <span id="presult"></span>

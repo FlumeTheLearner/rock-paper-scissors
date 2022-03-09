@@ -7,4 +7,6 @@ function computerPlay() {
 // function returns the expected value - tested in browser
 
 let playerSelection;
-let computerSelection;
+let computerSelection = computerPlay();
+
+function playRound() {}

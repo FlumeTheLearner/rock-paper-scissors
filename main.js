@@ -1,13 +1,10 @@
 function computerPlay() {
   let handSignals = ["rock", "paper", "scissors"];
   let randChoice = handSignals[Math.floor(Math.random() * handSignals.length)];
-  console.log(computerChoice);
+  console.log(randChoice);
 }
 
 // function returns the expected value - tested in browser
-
-let playerSelection;
-let computerSelection = computerPlay();
 
 function playRound(playerSelection, computerSelection) {
   switch (true) {
@@ -36,4 +33,7 @@ function playRound(playerSelection, computerSelection) {
       break;
   }
 }
+
+let playerSelection;
+let computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));

@@ -3,6 +3,7 @@ let playerSelection = playerPlay();
 let computerScore = 0;
 let playerScore = 0;
 
+// function to retrieve user choice via button click
 function playerPlay() {
   let rockButton = document.getElementById("rock");
   let scissorsButton = document.getElementById("scissors");
@@ -23,6 +24,8 @@ function playerPlay() {
     return playerSelection;
   });
 }
+
+// function to randomize computer choice
 
 function computerPlay() {
   let options = ["rock", "paper", "scissors"];

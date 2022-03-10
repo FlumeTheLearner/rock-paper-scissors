@@ -10,18 +10,18 @@ function playerPlay() {
   let paperButton = document.getElementById("paper");
 
   rockButton.addEventListener("click", function () {
-    playerSelection = "rock";
-    return playerSelection;
+    choice = "rock";
+    return choice;
   });
 
   paperButton.addEventListener("click", function () {
-    playerSelection = "paper";
-    return playerSelection;
+    choice = "paper";
+    return choice;
   });
 
   scissorsButton.addEventListener("click", function () {
-    playerSelection = "scissors";
-    return playerSelection;
+    choice = "scissors";
+    return choice;
   });
 }
 

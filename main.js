@@ -1,29 +1,46 @@
-let computerSelection = computerPlay();
-let playerSelection = playerPlay();
 let computerScore = 0;
 let playerScore = 0;
 
-// function to retrieve user choice via button click
-function playerPlay() {
-  let rockButton = document.getElementById("rock");
-  let scissorsButton = document.getElementById("scissors");
-  let paperButton = document.getElementById("paper");
+// attach event listeners to buttons
+let rockButton = document.getElementById("rock");
+let scissorsButton = document.getElementById("scissors");
+let paperButton = document.getElementById("paper");
 
-  rockButton.addEventListener("click", function () {
-    choice = "rock";
-    return choice;
-  });
+rockButton.addEventListener("click", function () {
+  let playerSelection = "rock";
+  let computerSelection = computerPlay();
+  const result = playRound(playerSelection, computerSelection);
+  console.log("You chose " + playerSelection);
+  console.log("Computer chose " + computerSelection);
+  console.log(result);
+  console.log(playerScore);
+  console.log(computerScore);
+  checkWinner();
+});
 
-  paperButton.addEventListener("click", function () {
-    choice = "paper";
-    return choice;
-  });
+paperButton.addEventListener("click", function () {
+  let playerSelection = "paper";
+  let computerSelection = computerPlay();
+  const result = playRound(playerSelection, computerSelection);
+  console.log("You chose " + playerSelection);
+  console.log("Computer chose " + computerSelection);
+  console.log(result);
+  console.log(playerScore);
+  console.log(computerScore);
+  checkWinner();
+});
 
-  scissorsButton.addEventListener("click", function () {
-    choice = "scissors";
-    return choice;
-  });
-}
+scissorsButton.addEventListener("click", function () {
+  let playerSelection = "scissors";
+  let computerSelection = computerPlay();
+  const result = playRound(playerSelection, computerSelection);
+  console.log("You chose " + playerSelection);
+  console.log("Computer chose " + computerSelection);
+  console.log(result);
+  console.log(playerScore);
+  console.log(computerScore);
+  checkWinner();
+});
 
 // function to randomize computer choice
 
@@ -66,23 +83,21 @@ function playRound(playerSelection, computerSelection) {
   return result;
 }
 
-function updateScore() {
-  document.getElementById("playerScore").textContent = playerScore;
-  document.getElementById("computerScore").textContent = computerScore;
-}
+// function updateScore() {
+//   document.getElementById("playerScore").textContent = playerScore;
+//   document.getElementById("computerScore").textContent = computerScore;
+// }
 
 function checkWinner() {
   let winner;
   if (playerScore === 5) {
     winner = "You win the game! Congratulations";
+    computerScore = 0;
+    playerScore = 0;
   } else if (computerScore === 5) {
     winner = "Computer wins the game! Better luck next time!";
+    computerScore = 0;
+    playerScore = 0;
   }
   console.log(winner);
 }
-
-console.log(playerSelection);
-console.log(computerSelection);
-console.log(playRound());
-console.log(playerScore);
-console.log(computerScore);

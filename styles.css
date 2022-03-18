@@ -61,6 +61,11 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
+
+#checkWinner {
+    font-weight: bold;
+}
+
 /* player selection container */
 
 #choose {

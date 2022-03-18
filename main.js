@@ -22,13 +22,14 @@ rockButton.addEventListener("click", function () {
   let playerSelection = "rock";
   let computerSelection = computerPlay();
   const result = playRound(playerSelection, computerSelection);
-  // Parse information to html regarding playerMove
+  // Parse information from js to html regarding playerMove
   let playerMove = ("You chose " + playerSelection);
   document.querySelector("#player-move").innerHTML = playerMove;
-   // Parse information to html regarding computerMove
+   // Parse information from js to html regarding computerMove
   let computerMove = ("Computer chose " + computerSelection);
   document.querySelector("#computer-move").innerHTML = computerMove;
-  console.log(result);
+  // Parse information from js to html regarding result
+  document.querySelector("#presult").innerHTML = result;
   console.log(playerScore);
   console.log(computerScore);
   checkWinner();

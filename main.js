@@ -30,8 +30,8 @@ rockButton.addEventListener("click", function () {
   document.querySelector("#computer-move").innerHTML = computerMove;
   // Parse information from js to html regarding result
   document.querySelector("#presult").innerHTML = result;
-  console.log(playerScore);
-  console.log(computerScore);
+  document.querySelector("#player-score").innerHTML = playerScore;
+  document.querySelection("#computer-score").innerHTML = computerScore;
   checkWinner();
 });
 

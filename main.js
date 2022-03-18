@@ -138,5 +138,5 @@ function checkWinner() {
     computerScore = 0;
     playerScore = 0;
   }
-  console.log(winner);
+  document.querySelector("#checkWinner").innerHTML = winner;
 }

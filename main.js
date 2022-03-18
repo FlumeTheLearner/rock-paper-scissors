@@ -34,6 +34,9 @@ rockButton.addEventListener("click", function () {
   document.querySelector("#player-score").innerHTML = playerScore;
   // Parse information from js to html regarding computerScore
   document.querySelector("#computer-score").innerHTML = computerScore;
+  if (playerScore === 5 || computerScore === 5) {
+    checkWinner();
+  }
 });
 
 paperButton.addEventListener("click", function () {
@@ -52,6 +55,9 @@ paperButton.addEventListener("click", function () {
   document.querySelector("#player-score").innerHTML = playerScore;
   // Parse information from js to html regarding computerScore
   document.querySelector("#computer-score").innerHTML = computerScore;
+  if (playerScore === 5 || computerScore === 5) {
+    checkWinner();
+  }
 });
 
 scissorsButton.addEventListener("click", function () {
@@ -70,6 +76,9 @@ scissorsButton.addEventListener("click", function () {
   document.querySelector("#player-score").innerHTML = playerScore;
   // Parse information from js to html regarding computerScore
   document.querySelector("#computer-score").innerHTML = computerScore;
+  if (playerScore === 5 || computerScore === 5) {
+    checkWinner();
+  }
 });
 
 // function to randomize computer choice

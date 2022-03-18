@@ -101,23 +101,23 @@ function playRound(playerSelection, computerSelection) {
     result = "Draw";
     // win result
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
-    result = "You win! Rock beats Scissors!";
+    result = "You win!";
     playerScore++;
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    result = "You win! Scissors beats Paper!";
+    result = "You win!";
     playerScore++;
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    result = "You win! Paper beats Rock!";
+    result = "You win!";
     playerScore++;
     // lose result
   } else if (computerSelection === "rock" && playerSelection === "scissors") {
-    result = "You lose! Rock beats Scissors";
+    result = "You lose!";
     computerScore++;
   } else if (computerSelection === "scissors" && playerSelection === "paper") {
-    result = "You lose! Scissors beats Paper!";
+    result = "You lose!";
     computerScore++;
   } else if (computerSelection === "paper" && playerSelection === "rock") {
-    result = "You lose! Paper beats Rock!";
+    result = "You lose!";
     computerScore++;
   } else {
     result = "An error has occured";
@@ -134,12 +134,19 @@ function checkWinner() {
   let winner;
   if (playerScore === 5) {
     winner = "You win the game! Congratulations!";
-    computerScore = 0;
     playerScore = 0;
+    computerScore = 0;
   } else if (computerScore === 5) {
     winner = "Computer wins the game! Better luck next time!";
-    computerScore = 0;
     playerScore = 0;
+    computerScore = 0;
   }
   document.querySelector("#checkWinner").innerHTML = winner;
+}
+
+function reset() {
+  let winner;
+  playerScore = 0;
+  computerScore = 0;
+  winner = "";
 }

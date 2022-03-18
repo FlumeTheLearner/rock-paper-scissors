@@ -1,6 +1,9 @@
 let computerScore = 0;
 let playerScore = 0;
 
+document.querySelector("#player-score").innerHTML = playerScore;
+document.querySelector("#computer-score").innerHTML = computerScore;
+
 // attach event listeners to buttons
 let rockButton = document.getElementById("rock");
 let scissorsButton = document.getElementById("scissors");

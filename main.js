@@ -30,33 +30,46 @@ rockButton.addEventListener("click", function () {
   document.querySelector("#computer-move").innerHTML = computerMove;
   // Parse information from js to html regarding result
   document.querySelector("#presult").innerHTML = result;
+  // Parse information from js to html regarding playerScore
   document.querySelector("#player-score").innerHTML = playerScore;
-  document.querySelection("#computer-score").innerHTML = computerScore;
-  checkWinner();
+  // Parse information from js to html regarding computerScore
+  document.querySelector("#computer-score").innerHTML = computerScore;
 });
 
 paperButton.addEventListener("click", function () {
   let playerSelection = "paper";
   let computerSelection = computerPlay();
   const result = playRound(playerSelection, computerSelection);
-  console.log("You chose " + playerSelection);
-  console.log("Computer chose " + computerSelection);
-  console.log(result);
-  console.log(playerScore);
-  console.log(computerScore);
-  checkWinner();
+  // Parse information from js to html regarding playerMove
+  let playerMove = ("You chose " + playerSelection);
+  document.querySelector("#player-move").innerHTML = playerMove;
+   // Parse information from js to html regarding computerMove
+  let computerMove = ("Computer chose " + computerSelection);
+  document.querySelector("#computer-move").innerHTML = computerMove;
+  // Parse information from js to html regarding result
+  document.querySelector("#presult").innerHTML = result;
+  // Parse information from js to html regarding playerScore
+  document.querySelector("#player-score").innerHTML = playerScore;
+  // Parse information from js to html regarding computerScore
+  document.querySelector("#computer-score").innerHTML = computerScore;
 });
 
 scissorsButton.addEventListener("click", function () {
   let playerSelection = "scissors";
   let computerSelection = computerPlay();
   const result = playRound(playerSelection, computerSelection);
-  console.log("You chose " + playerSelection);
-  console.log("Computer chose " + computerSelection);
-  console.log(result);
-  console.log(playerScore);
-  console.log(computerScore);
-  checkWinner();
+  // Parse information from js to html regarding playerMove
+  let playerMove = ("You chose " + playerSelection);
+  document.querySelector("#player-move").innerHTML = playerMove;
+   // Parse information from js to html regarding computerMove
+  let computerMove = ("Computer chose " + computerSelection);
+  document.querySelector("#computer-move").innerHTML = computerMove;
+  // Parse information from js to html regarding result
+  document.querySelector("#presult").innerHTML = result;
+  // Parse information from js to html regarding playerScore
+  document.querySelector("#player-score").innerHTML = playerScore;
+  // Parse information from js to html regarding computerScore
+  document.querySelector("#computer-score").innerHTML = computerScore;
 });
 
 // function to randomize computer choice

@@ -91,7 +91,7 @@ function playRound(playerSelection, computerSelection) {
 function checkWinner() {
   let winner;
   if (playerScore === 5) {
-    winner = "You win the game! Congratulations";
+    winner = "You win the game! Congratulations!";
     computerScore = 0;
     playerScore = 0;
   } else if (computerScore === 5) {

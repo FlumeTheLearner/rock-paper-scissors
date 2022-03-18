@@ -141,11 +141,11 @@ function playRound(playerSelection, computerSelection) {
 
 function checkWinner() {
   if (playerScore === 5) {
-    winner = "You win the game! Congratulations!";
+    winner = "Congratulations, you win the game! Choose another move to restart the game!";
     playerScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
-    winner = "Computer wins the game! Better luck next time!";
+    winner = "Unlucky, you lost the game! Choose another move to restart the game!";
     playerScore = 0;
     computerScore = 0;
   }

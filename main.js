@@ -6,12 +6,28 @@ let rockButton = document.getElementById("rock");
 let scissorsButton = document.getElementById("scissors");
 let paperButton = document.getElementById("paper");
 
+// rockButton.addEventListener("click", function () {
+//   let playerSelection = "rock";
+//   let computerSelection = computerPlay();
+//   const result = playRound(playerSelection, computerSelection);
+//   console.log("You chose " + playerSelection);
+//   console.log("Computer chose " + computerSelection);
+//   console.log(result);
+//   console.log(playerScore);
+//   console.log(computerScore);
+//   checkWinner();
+// });
+
 rockButton.addEventListener("click", function () {
   let playerSelection = "rock";
   let computerSelection = computerPlay();
   const result = playRound(playerSelection, computerSelection);
-  console.log("You chose " + playerSelection);
-  console.log("Computer chose " + computerSelection);
+  // Parse information to html regarding playerMove
+  let playerMove = ("You chose " + playerSelection);
+  document.querySelector("#player-move").innerHTML = playerMove;
+   // Parse information to html regarding computerMove
+  let computerMove = ("Computer chose " + computerSelection);
+  document.querySelector("#computer-move").innerHTML = computerMove;
   console.log(result);
   console.log(playerScore);
   console.log(computerScore);

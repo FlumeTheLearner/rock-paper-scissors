@@ -9,4 +9,23 @@ fieldset {
     min-height: 500px;
   }
 
-  
+.heading {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#scoretext {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    display: block;
+}
+
+#scores {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+}

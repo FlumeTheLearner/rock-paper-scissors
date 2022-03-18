@@ -1,8 +1,11 @@
+let username = prompt("Please enter your name", "");
 let computerScore = 0;
 let playerScore = 0;
+let winner;
 
 document.querySelector("#player-score").innerHTML = playerScore;
 document.querySelector("#computer-score").innerHTML = computerScore;
+document.querySelector("#user-name").innerHTML = username;
 
 // attach event listeners to buttons
 let rockButton = document.getElementById("rock");
@@ -39,6 +42,8 @@ rockButton.addEventListener("click", function () {
   document.querySelector("#computer-score").innerHTML = computerScore;
   if (playerScore === 5 || computerScore === 5) {
     checkWinner();
+  } else {
+    reset();
   }
 });
 
@@ -60,6 +65,8 @@ paperButton.addEventListener("click", function () {
   document.querySelector("#computer-score").innerHTML = computerScore;
   if (playerScore === 5 || computerScore === 5) {
     checkWinner();
+  } else {
+    reset();
   }
 });
 
@@ -81,6 +88,8 @@ scissorsButton.addEventListener("click", function () {
   document.querySelector("#computer-score").innerHTML = computerScore;
   if (playerScore === 5 || computerScore === 5) {
     checkWinner();
+  } else {
+    reset();
   }
 });
 
@@ -131,7 +140,6 @@ function playRound(playerSelection, computerSelection) {
 // }
 
 function checkWinner() {
-  let winner;
   if (playerScore === 5) {
     winner = "You win the game! Congratulations!";
     playerScore = 0;
@@ -145,8 +153,8 @@ function checkWinner() {
 }
 
 function reset() {
-  let winner;
-  playerScore = 0;
-  computerScore = 0;
-  winner = "";
+  if (playerScore === 0 || computerScore === 0) {
+    winner = "";
+  }
+  document.querySelector("#checkWinner").innerHTML = winner;
 }
